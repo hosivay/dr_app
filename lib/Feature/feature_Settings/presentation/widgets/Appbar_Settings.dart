@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:dr_app/Core/widgets/AppBarNormal.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
 
 import 'package:flutter/cupertino.dart';
@@ -17,23 +18,10 @@ AppBar appbar_SettingsPage(BuildContext context) {
         ),
       ),
     ),
-    title: Row(
-      children: [
-        const Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Icon(
-            CupertinoIcons.gear_alt_fill,
-            size: 30,
-          ),
-        ),
-        Text(
-          "تنظیمات",
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .copyWith(fontWeight: FontWeight.bold),
-        ),
-      ],
+    title: appBar_normal(
+      context: context,
+      title: "تنظیمات",
+      icon: CupertinoIcons.gear_alt_fill,
     ),
     actions: [
       ButtonAppBar(
