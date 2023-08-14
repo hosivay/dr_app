@@ -9,6 +9,7 @@ AppBar mainAppBar(
   }
 ) {
   return AppBar(
+    leading: const Text(""),
     toolbarHeight: 85,
     flexibleSpace: ClipRect(
       child: BackdropFilter(
