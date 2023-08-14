@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-Widget settingsItem({
-  required BuildContext context,
-  required IconData icon,
-  required String title ,
-  Function()? onTap  
-}) {
+Widget settingsItem(
+    {required BuildContext context,
+    required IconData icon,
+    required String title,
+    Function()? onTap,
+    List<Widget>? actions,
+    bool? redColor = false}) {
   return InkWell(
     onTap: onTap,
     child: Padding(
@@ -20,16 +21,26 @@ Widget settingsItem({
                 width: 65,
                 height: 65,
                 color: Theme.of(context).primaryColor.withOpacity(0.1),
+                    
                 child: Icon(
                   icon,
-                  size: 30,
+                  size: 30,color: redColor! ? Colors.red : null,
                 ),
               ),
             ),
           ),
           Text(
             title,
-            style: Theme.of(context).textTheme.headlineSmall,
+            style: !redColor
+                ? Theme.of(context).textTheme.headlineSmall
+                : Theme.of(context)
+                    .textTheme
+                    .headlineSmall!
+                    .copyWith(color: Colors.red),
+          ),
+          const Spacer(),
+          Row(
+            children: actions ?? [],
           )
         ],
       ),

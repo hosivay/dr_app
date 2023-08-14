@@ -1,4 +1,5 @@
 import 'package:dr_app/Config/Theme.dart';
+import 'package:dr_app/Feature/feature_Settings/presentation/widgets/ActionText.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/Appbar_Settings.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/SettingsItem.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,11 +25,13 @@ class SettingsPage extends StatelessWidget {
               context: context,
               icon: Icons.language,
               title: "زبان",
+              actions: [actionText(context,"فارسی")]
             ),
             settingsItem(
               context: context,
               icon: CupertinoIcons.location_solid,
               title: "منطقه",
+                  actions: [actionText(context,"شیراز")]
             ),
             myDivider(),
             settingsItem(
@@ -39,13 +42,15 @@ class SettingsPage extends StatelessWidget {
             settingsItem(
               context: context,
               icon: CupertinoIcons.gear_alt_fill,
-              title: "v1.0",
+              title: "نسخه اپلیکیشن",
+                  actions: [actionText(context,"v1.0")]
             ),
             myDivider(),
             settingsItem(
               context: context,
               icon: Icons.logout,
               title: "خارج شدن از اکانت",
+              redColor: true
             ),
           ],
         ),
