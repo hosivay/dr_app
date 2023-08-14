@@ -35,22 +35,22 @@ class NavigationBarPage extends StatelessWidget {
       bottomNavigationBar: GetBuilder<NavController>(
         builder: (controller) {
           return BottomBarDefault(
-            items: const [
+            items:  [
               TabItem(
                 icon: CupertinoIcons.home,
-                title: 'خانه',
+                title: "Home".tr,
               ),
               TabItem(
                 icon: CupertinoIcons.search,
-                title: 'جستجو',
+                title: "Search".tr,
               ),
               TabItem(
                 icon: CupertinoIcons.calendar,
-                title: 'نوبت ها',
+                title: "appointments".tr,
               ),
               TabItem(
                 icon: CupertinoIcons.gear,
-                title: 'تنظیمات',
+                title: "Settings".tr,
               ),
             ],
             backgroundColor: Theme.of(context).scaffoldBackgroundColor,

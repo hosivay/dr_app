@@ -31,7 +31,7 @@ class WellcomePage extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  "دکتر اپ",
+                  "NameApp".tr,
                   style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                         fontSize: 45,
                         fontWeight: FontWeight.bold,
@@ -64,15 +64,15 @@ class WellcomePage extends StatelessWidget {
                                 const LoginPage(),
                               );
                             },
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text("ورود به اکانت"),
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Login".tr),
                             )),
                         ElevatedButton(
                             onPressed: () {},
-                            child: const Padding(
-                              padding: EdgeInsets.all(8.0),
-                              child: Text("ثبت نام"),
+                            child:  Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("Sign Up".tr),
                             )),
                       ],
                     ),

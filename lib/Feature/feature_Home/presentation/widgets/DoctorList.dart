@@ -32,7 +32,7 @@ Widget row_doctorList(
                         color: Theme.of(context).textTheme.labelLarge!.color),
                   ),
                   Text(
-                    "پزشک های برتر",
+                    "TopDoctors".tr,
                     style: Theme.of(context)
                         .textTheme
                         .labelLarge!
@@ -49,7 +49,7 @@ Widget row_doctorList(
                         color: Theme.of(context).textTheme.labelLarge!.color),
                   ),
                   Text(
-                    "پزشک های ذخیره شده",
+                    "SavedDoctors".tr,
                     style: Theme.of(context)
                         .textTheme
                         .labelSmall!

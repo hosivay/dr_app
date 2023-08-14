@@ -38,10 +38,10 @@ Widget NobatisEmptyWidget(BuildContext context, String title) {
           ],
         ),
       ),
-      const Center(
+       Center(
         child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text("خالی"),
+          padding: const EdgeInsets.all(8.0),
+          child: Text("Empty".tr),
         ),
       ),
     ],
@@ -133,7 +133,7 @@ Widget NobatIsNotEmptyWidget(
                   child: Row(
                     children: [
                       Text(
-                        "تاریخ و ساعت :",
+                        "${'date and time'.tr}:",
                         style: Theme.of(context)
                             .textTheme
                             .labelLarge!

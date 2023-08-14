@@ -20,7 +20,7 @@ Widget SearchField(BuildContext context) {
             onChanged: (value) =>animationSearchController.repeatON(),
             decoration: InputDecoration(
               hintText:
-                  "جستجو با توجه به ${dropMenuController.chosenValue.value}",
+                  "Search by".tr+" ${dropMenuController.chosenValue.value}",
 
             ),
           );

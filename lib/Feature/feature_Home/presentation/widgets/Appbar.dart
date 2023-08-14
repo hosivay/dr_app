@@ -39,7 +39,7 @@ AppBar appbar_HomePage(BuildContext context) {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    "دکتر اپ",
+                    "NameApp".tr,
                     style: Theme.of(context)
                         .textTheme
                         .headlineSmall!
@@ -58,7 +58,7 @@ AppBar appbar_HomePage(BuildContext context) {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "سلام",
+                  "Hello".tr,
                   style: Theme.of(context).textTheme.labelLarge,
                 ),
                 Text(
@@ -78,12 +78,12 @@ AppBar appbar_HomePage(BuildContext context) {
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.location_solid,
-          title: "شیراز",
+          title: "Shiraz".tr,
           onTap: () {}),
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.person_crop_circle_fill,
-          title: "نمایه",
+          title: "Profile".tr,
           onTap: () {}),
     ],
   );

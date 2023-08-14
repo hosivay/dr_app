@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                               padding: const EdgeInsets.all(8.0),
                               child: ElevatedButton(
                                   onPressed: () => loginController.sendSMS(),
-                                  child: const Text("ورود")),
+                                  child: Text("Login".tr)),
                             )
                           ],
                         );
@@ -83,8 +83,8 @@ class LoginPage extends StatelessWidget {
             )));
   }
 
-  OutlineInputBorder myinputborder() { 
-    return  OutlineInputBorder(
+  OutlineInputBorder myinputborder() {
+    return OutlineInputBorder(
         borderRadius: const BorderRadius.all(Radius.circular(20)),
         borderSide: BorderSide(
           color: Colors.blue.shade700,

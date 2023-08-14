@@ -4,6 +4,7 @@ import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.da
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // ignore: non_constant_identifier_names
 AppBar appbar_SettingsPage(BuildContext context) {
@@ -20,14 +21,14 @@ AppBar appbar_SettingsPage(BuildContext context) {
     ),
     title: appBar_normal(
       context: context,
-      title: "تنظیمات",
+      title: "Settings".tr,
       icon: CupertinoIcons.gear_alt_fill,
     ),
     actions: [
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.person_crop_circle_fill,
-          title: "نمایه",
+          title: "Profile".tr,
           onTap: () {}),
     ],
   );

@@ -11,14 +11,16 @@ class LoginController extends GetxController {
 
   sendSMS() {
     isSetNumber(true);
-    mySnackBar(title: "دکتر اپ", message: "کد : 4542", attention: true);
+    mySnackBar(title: "NameApp".tr, message: "Code : 4542", attention: true);
     update();
   }
 
   codeIsTrue() {
     Future.delayed(const Duration(seconds: 3));
-    Get.offAll(const NavigationBarPage());
-     mySnackBar(title: "خوش آمدید", message: "", );
-     
+    Get.to(const NavigationBarPage());
+    mySnackBar(
+      title:"Wellcome".tr,
+      message: "",
+    );
   }
 }

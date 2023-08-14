@@ -1,3 +1,4 @@
+import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Config/ThemeGetX.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/DoctorList.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/ActionText.dart';
@@ -14,6 +15,7 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeController = Get.find<ThemeController>();
+    final localizationController = Get.put(LocalizationController());
     return Scaffold(
       appBar: appbar_SettingsPage(context),
       body: SingleChildScrollView(
@@ -23,7 +25,7 @@ class SettingsPage extends StatelessWidget {
             settingsItem(
                 context: context,
                 icon: CupertinoIcons.moon_fill,
-                title: "حالت شب",
+                title: "DarkMode".tr,
                 onTap: () {
                   if (Get.isDarkMode) {
                     themeController.changeThemeMode(ThemeModeType.LIGHT);
@@ -34,13 +36,44 @@ class SettingsPage extends StatelessWidget {
             settingsItem(
                 context: context,
                 icon: Icons.language,
-                title: "زبان",
-                actions: [actionText(context, "فارسی")]),
+                title: "Language".tr,
+                actions: [ ],
+                onTap: () {
+                
+                    Get.defaultDialog(
+                      title: 'Select Language',
+                      content: Column(
+                        children: [
+                          ListTile(
+                            title: Text('English'),
+                            onTap: () {
+                              Get.updateLocale(localizationController.enLocale);
+                              Get.back();
+                            },
+                          ),
+                          ListTile(
+                            title: Text('فارسی'),
+                            onTap: () {
+                              Get.updateLocale(
+                                  localizationController.defaultLocale);
+                              Get.back();
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  
+                }),
             settingsItem(
                 context: context,
                 icon: CupertinoIcons.location_solid,
-                title: "منطقه",
-                actions: [actionText(context, "شیراز")]),
+                title: "Location".tr,
+                actions: [
+                  actionText(
+                    context,
+                    "Shiraz".tr,
+                  )
+                ]),
             myDivider(),
             row_doctorList(
               context: context,
@@ -48,20 +81,15 @@ class SettingsPage extends StatelessWidget {
             ),
             myDivider(),
             settingsItem(
-              context: context,
-              icon: CupertinoIcons.person_circle_fill,
-              title: "برنامه نویس : Hosivay",
-            ),
-            settingsItem(
                 context: context,
                 icon: CupertinoIcons.gear_alt_fill,
-                title: "نسخه اپلیکیشن",
+                title: "Version".tr,
                 actions: [actionText(context, "v1.0")]),
             myDivider(),
             settingsItem(
                 context: context,
                 icon: Icons.logout,
-                title: "خارج شدن از اکانت",
+                title: "Logout".tr,
                 redColor: true,
                 onTap: () {
                   Get.offAll(const WellcomePage());

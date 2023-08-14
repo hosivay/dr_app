@@ -1,10 +1,14 @@
+import 'package:dr_app/Config/Localization/LocalizationService.dart';
+import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Config/ThemeGetX.dart';
 import 'package:dr_app/Feature/feature_NavigationPage/presentation/screens/Nav.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -13,6 +17,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizationController = Get.put(LocalizationController());
     return GetMaterialApp(
       title: 'Dr App',
       theme: FlexThemeData.light(
@@ -20,10 +25,12 @@ class MyApp extends StatelessWidget {
       darkTheme: FlexThemeData.dark(
           fontFamily: 'Vazir', scheme: FlexScheme.blueM3, useMaterial3: true),
       themeMode: ThemeMode.system,
-      locale: const Locale('fa', 'IR'),
+      locale: localizationController.defaultLocale,
+      translations: LocalizationService(),
+      fallbackLocale: localizationController.defaultLocale,
       debugShowCheckedModeBanner: false,
       home: GetBuilder(
-         init: ThemeController(),
+        init: ThemeController(),
         builder: (controller) => const NavigationBarPage(),
       ),
     );

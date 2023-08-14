@@ -23,7 +23,7 @@ AppBar appbar_SearchPage(BuildContext context) {
     ),
     title: appBar_normal(
       context: context,
-      title: "جستجو",
+      title: "Search".tr,
       icon: CupertinoIcons.search,
     ),
     actions: [
@@ -36,9 +36,10 @@ AppBar appbar_SearchPage(BuildContext context) {
               child: DropdownButton<String>(
                 alignment: Alignment.topCenter,
                 value: dropMenuController.chosenValue.value,
+                style: Theme.of(context).textTheme.labelSmall!.copyWith(fontSize: 6),
                 items: <String>[
-                  'دکتر',
-                  'تخصص',
+                  "doctor".tr,
+                  "Doctor specialty",
                 ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -57,7 +58,7 @@ AppBar appbar_SearchPage(BuildContext context) {
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.location_solid,
-          title: "شیراز",
+          title: "Shiraz".tr,
           onTap: () {}),
     ],
   );

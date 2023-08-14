@@ -44,6 +44,7 @@ dependencies:
   flutter_otp_text_field: ^1.1.1
   carousel_slider: ^4.2.1
   animate_do: ^3.0.2
+  get_storage: ^2.1.1
 
 dev_dependencies:
   flutter_test:

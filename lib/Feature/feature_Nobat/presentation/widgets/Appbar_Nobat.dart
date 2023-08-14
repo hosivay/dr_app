@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:dr_app/Core/widgets/AppBarNormal.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // ignore: non_constant_identifier_names
 AppBar appbar_NobatPage(BuildContext context) {
@@ -17,6 +18,6 @@ AppBar appbar_NobatPage(BuildContext context) {
       ),
     ),
     title: appBar_normal(
-        context: context, icon: CupertinoIcons.calendar, title: "نوبت ها"),
+        context: context, icon: CupertinoIcons.calendar, title: "appointments".tr),
   );
 }

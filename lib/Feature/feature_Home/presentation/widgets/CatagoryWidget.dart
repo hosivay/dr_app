@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 Widget catagory_Widget() {
   return SizedBox(
     width: Get.width,
-    height: Get.width / 3.5,
+    height: Get.width / 3.3,
     child: ListView.builder(
       itemCount: catagoryData.length,
       scrollDirection: Axis.horizontal,
@@ -22,10 +22,10 @@ Widget catagory_Widget() {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(25),
               child: Container(
-                width: Get.width / 4,
-                height: Get.width / 4,
+                width: Get.width / 3.8,
+                height: Get.width / 3.8,
                 color: Theme.of(context).primaryColor.withOpacity(0.8),
-                child: Column(
+                child: Column(mainAxisAlignment: MainAxisAlignment.center,crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -36,9 +36,11 @@ Widget catagory_Widget() {
                         height: 50,
                       ),
                     ),
-                    Text(
-                      catagoryData[index]["title"].toString(),
-                      style: const TextStyle(color: Colors.white),
+                    Container(
+                      child: Text(
+                        catagoryData[index]["title"].toString(),
+                        style: const TextStyle(color: Colors.white,fontSize: 11 ),
+                      ),
                     )
                   ],
                 ),
