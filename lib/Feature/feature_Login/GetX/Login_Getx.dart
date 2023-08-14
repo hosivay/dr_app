@@ -1,9 +1,9 @@
 import 'package:dr_app/Core/widgets/Snackbar.dart';
+import 'package:dr_app/Feature/feature_SplashScreen/presentation/screens/SplashScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../feature_NavigationPage/presentation/screens/Nav.dart';
 
 class LoginController extends GetxController {
   var isSetNumber = false.obs;
@@ -17,7 +17,7 @@ class LoginController extends GetxController {
 
   codeIsTrue() {
     Future.delayed(const Duration(seconds: 3));
-    Get.to(const NavigationBarPage());
+    Get.to( SplashScreenPage(),);
     mySnackBar(
       title:"Wellcome".tr,
       message: "",

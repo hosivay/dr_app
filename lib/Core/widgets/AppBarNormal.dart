@@ -2,14 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-AppBar mainAppBar(
-  {
-    required Widget title,
-   List<Widget>? actions
-  }
-) {
+AppBar mainAppBar({required Widget title, List<Widget>? actions}) {
   return AppBar(
-    leading: const Text(""),
+    leading: null,
     toolbarHeight: 85,
     flexibleSpace: ClipRect(
       child: BackdropFilter(

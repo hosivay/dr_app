@@ -1,7 +1,6 @@
 import 'package:dr_app/Config/Localization/LocalizationService.dart';
 import 'package:dr_app/Config/Localization/Localization_Getx.dart';
-import 'package:dr_app/Config/ThemeGetX.dart';
-import 'package:dr_app/Feature/feature_NavigationPage/presentation/screens/Nav.dart';
+import 'package:dr_app/Feature/feature_SplashScreen/presentation/screens/SplashScreen.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,10 +28,7 @@ class MyApp extends StatelessWidget {
       translations: LocalizationService(),
       fallbackLocale: localizationController.defaultLocale,
       debugShowCheckedModeBanner: false,
-      home: GetBuilder(
-        init: ThemeController(),
-        builder: (controller) => const NavigationBarPage(),
-      ),
+      home: SplashScreenPage(),
     );
   }
 }
