@@ -1,6 +1,27 @@
-
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
+
+AppBar mainAppBar(
+  {
+    required Widget title,
+   List<Widget>? actions
+  }
+) {
+  return AppBar(
+    toolbarHeight: 85,
+    flexibleSpace: ClipRect(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
+        child: Container(
+          color: Colors.transparent,
+        ),
+      ),
+    ),
+    title: title,
+    actions: actions,
+  );
+}
 
 Widget appBar_normal(
     {required BuildContext context,

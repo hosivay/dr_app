@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:dr_app/Core/utils/Animation.dart';
+import 'package:dr_app/Core/widgets/AppBarNormal.dart';
 import 'package:dr_app/Feature/feature_Home/GetX/AppBar_Getx.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
 import 'package:dr_app/assets/images/ImageConstPath.dart';
@@ -13,16 +14,7 @@ AppBar appbar_HomePage(BuildContext context) {
   AppbarController appbarController = Get.put(AppbarController());
   appbarController.isNameShow();
 
-  return AppBar(
-    toolbarHeight: 85,
-    flexibleSpace: ClipRect(
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 4, sigmaY: 4),
-        child: Container(
-          color: Colors.transparent,
-        ),
-      ),
-    ),
+  return mainAppBar(
     title: Obx(() {
       return Visibility(
         visible: appbarController.isShowName.value,
