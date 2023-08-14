@@ -1,4 +1,4 @@
-import 'package:dr_app/Config/Theme.dart';
+import 'package:dr_app/Config/ThemeGetX.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/Appbar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/CatagoryWidget.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/DoctorList.dart';
@@ -35,11 +35,7 @@ class HomePage extends StatelessWidget {
               context:context,
               topDoctors: true,
             ), 
-            myDivider(),
-            row_doctorList(
-              context:context,
-              topDoctors: false,
-            ),
+            
           ],
         ),
       ),

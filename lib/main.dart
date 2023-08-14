@@ -1,3 +1,4 @@
+import 'package:dr_app/Config/ThemeGetX.dart';
 import 'package:dr_app/Feature/feature_NavigationPage/presentation/screens/Nav.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       locale: const Locale('fa', 'IR'),
       debugShowCheckedModeBanner: false,
-      home: const NavigationBarPage(),
+      home: GetBuilder(
+         init: ThemeController(),
+        builder: (controller) => const NavigationBarPage(),
+      ),
     );
   }
 }
