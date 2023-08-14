@@ -1,5 +1,6 @@
 import 'package:awesome_bottom_bar/awesome_bottom_bar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/screens/HomePage.dart';
+import 'package:dr_app/Feature/feature_Search/presentation/screens/SearchPage.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/screens/SettingsPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,7 @@ class NavigationBarPage extends StatelessWidget {
     NavController navController = Get.put(NavController());
     var pages = [
       const HomePage(),
-      Container(
-        color: Colors.red,
-      ),
+      const SearchPage(),
       Container(
         color: Colors.yellow,
       ),
