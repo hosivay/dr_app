@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            catagory_Widget(),
+            catagory_Widget(context),
             myDivider(),
             row_doctorList(
               context:context,

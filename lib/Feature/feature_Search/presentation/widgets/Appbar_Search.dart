@@ -39,7 +39,7 @@ AppBar appbar_SearchPage(BuildContext context) {
                 style: Theme.of(context).textTheme.labelSmall!.copyWith(fontSize: 6),
                 items: <String>[
                   "doctor".tr,
-                  "Doctor specialty",
+                  "Doctor specialty".tr,
                 ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
