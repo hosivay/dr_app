@@ -24,7 +24,7 @@ writeUser({
 
 readUser(String option) {
   var getdata = GetStorage().read('UserData');
-  print(getdata);
+ 
   return getdata[option] ?? "Error";
 }
 

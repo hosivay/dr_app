@@ -9,19 +9,21 @@ Future<dynamic> ChangeLanguage(LocalizationController localizationController) {
     content: Column(
       children: [
         ListTile(
-          title: const Text('English'),
+          title: const Text('فارسی'),
           onTap: () {
-            Get.updateLocale(localizationController.enLocale);
+            localizationController
+                .setLocale(localizationController.defaultLocale);
             Get.back();
           },
         ),
         ListTile(
-          title: const Text('فارسی'),
+          title: const Text('English'),
           onTap: () {
-            Get.updateLocale(localizationController.defaultLocale);
+            localizationController.setLocale(localizationController.enLocale);
             Get.back();
           },
         ),
+        
       ],
     ),
   );

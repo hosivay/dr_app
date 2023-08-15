@@ -18,6 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizationController = Get.put(LocalizationController());
+    final savedLocale = localizationController.stringToLocale(GetStorage().read("locale"));
+ 
+    final locale = savedLocale ?? localizationController.defaultLocale;
+
     return GetMaterialApp(
       title: 'Dr App',
       theme: FlexThemeData.light(
@@ -25,7 +29,7 @@ class MyApp extends StatelessWidget {
       darkTheme: FlexThemeData.dark(
           fontFamily: 'Vazir', scheme: FlexScheme.blueM3, useMaterial3: true),
       themeMode: ThemeMode.system,
-      locale: localizationController.defaultLocale,
+      locale: locale,
       translations: LocalizationService(),
       fallbackLocale: localizationController.defaultLocale,
       debugShowCheckedModeBanner: false,
