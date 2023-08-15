@@ -1,3 +1,4 @@
+import 'package:dr_app/Core/database/UserData.dart';
 import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_SplashScreen/presentation/screens/SplashScreen.dart';
 import 'package:flutter/cupertino.dart';
@@ -5,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SignUpController extends GetxController {
+  
   var isSetNumber = false.obs;
   var animation = "lib/assets/lottie/login.json".obs;
   var isRepeatAnimation = false.obs;
@@ -29,11 +31,18 @@ class SignUpController extends GetxController {
     update();
   }
 
-  codeIsTrue(BuildContext context) {
+  codeIsTrue(BuildContext context) async {
+   await writeUser(
+      name: nameController.text.toString(),
+      phoneNumber: phoneNumberController.text.toString(),
+      nationalCode: nationalCodeController.text.toString(),
+      age: ageController.text.toString(),
+      gender: chosenValue.value.toString(),
+    );
     animation.value = "lib/assets/lottie/Tik.json";
     isRepeatAnimation(true);
     Future.delayed(const Duration(seconds: 1), () => isRepeatAnimation(false));
-  Future.delayed(
+    Future.delayed(
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(
             context,

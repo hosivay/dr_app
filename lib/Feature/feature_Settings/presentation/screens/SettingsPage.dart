@@ -10,6 +10,7 @@ import 'package:dr_app/Feature/feature_wellcomePage/presentation/screens/Wellcom
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -76,7 +77,9 @@ class SettingsPage extends StatelessWidget {
                 icon: Icons.logout,
                 title: "Logout".tr,
                 redColor: true,
-                onTap: () {
+                onTap: () async{
+                 await GetStorage().remove('UserData');
+                 await GetStorage().remove('isSign');
                   Get.offAll(const WellcomePage());
                 }),
           ],
@@ -84,6 +87,4 @@ class SettingsPage extends StatelessWidget {
       ),
     );
   }
-
- 
 }

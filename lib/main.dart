@@ -29,7 +29,9 @@ class MyApp extends StatelessWidget {
       translations: LocalizationService(),
       fallbackLocale: localizationController.defaultLocale,
       debugShowCheckedModeBanner: false,
-      home: WellcomePage(),
+      home: GetStorage().read('isSign') == true
+          ? SplashScreenPage()
+          : const WellcomePage(),
     );
   }
 }

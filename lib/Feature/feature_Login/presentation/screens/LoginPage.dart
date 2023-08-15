@@ -1,4 +1,5 @@
 import 'package:dr_app/Core/widgets/AnimateBackground.dart';
+import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Login/GetX/Login_Getx.dart';
 import 'package:dr_app/Feature/feature_SignUp/presentation/widgets/TextFieldWidget.dart';
 import 'package:flutter/material.dart';
@@ -42,8 +43,9 @@ class LoginPage extends StatelessWidget {
                               borderColor: Theme.of(context).primaryColor,
                               showFieldAsBox: true,
                               onCodeChanged: (String code) {},
-                              onSubmit: (String verificationCode) =>
-                                  loginController.codeIsTrue(context)),
+                              onSubmit: (String verificationCode) {
+                                //loginController.codeIsTrue(context);
+                              }),
                         );
                       } else {
                         return Column(
@@ -61,7 +63,10 @@ class LoginPage extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: ElevatedButton(
-                                  onPressed: () => loginController.sendSMS(),
+                                  onPressed: () {
+                                    mySnackBar(title: "شما اکانت ندارید");
+                                    // loginController.sendSMS();
+                                  },
                                   child: Text("Login".tr)),
                             )
                           ],

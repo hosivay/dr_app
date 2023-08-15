@@ -1,5 +1,6 @@
 import 'package:dr_app/Core/widgets/AppBarNormal.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
+import 'package:dr_app/Feature/feature_Profile/presentation/screens/ProfilePage.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,9 @@ AppBar appbar_SettingsPage(BuildContext context) {
           context: context,
           icon: CupertinoIcons.person_crop_circle_fill,
           title: "Profile".tr,
-          onTap: () {}),
+          onTap: () {
+            Get.to(const ProfilePage());
+          }),
     ],
   );
 }
