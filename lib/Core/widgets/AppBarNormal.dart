@@ -2,12 +2,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-AppBar mainAppBar({required Widget title, List<Widget>? actions}) {
+AppBar mainAppBar({required Widget title, List<Widget>? actions,bool? hideLeading = true}) {
   return AppBar(
-    leading: const SizedBox(
+    leading: hideLeading! ? const SizedBox(
       height: 0,
-    ),
-    leadingWidth: 0,
+    ): null,
+    leadingWidth:hideLeading ?  0 : null,
     toolbarHeight: 85,
     flexibleSpace: ClipRect(
       child: BackdropFilter(

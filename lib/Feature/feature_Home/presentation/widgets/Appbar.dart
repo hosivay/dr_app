@@ -1,10 +1,12 @@
 import 'dart:ui';
 
+import 'package:dr_app/Core/database/UserData.dart';
 import 'package:dr_app/Core/utils/Animation.dart';
 import 'package:dr_app/Core/widgets/AppBarNormal.dart';
 import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Home/GetX/AppBar_Getx.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
+import 'package:dr_app/Feature/feature_Profile/presentation/screens/ProfilePage.dart';
 import 'package:dr_app/assets/images/ImageConstPath.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -55,7 +57,7 @@ AppBar appbar_HomePage(BuildContext context) {
                   style: Theme.of(context).textTheme.labelLarge,
                 ),
                 Text(
-                  "حسین ولی پور",
+                  readUser("Name").toString(),
                   style: Theme.of(context)
                       .textTheme
                       .headlineSmall!
@@ -73,13 +75,18 @@ AppBar appbar_HomePage(BuildContext context) {
           icon: CupertinoIcons.location_solid,
           title: "Shiraz".tr,
           onTap: () {
-                mySnackBar(attention: true,   title: "LocationAlert".tr,);
+            mySnackBar(
+              attention: true,
+              title: "LocationAlert".tr,
+            );
           }),
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.person_crop_circle_fill,
           title: "Profile".tr,
-          onTap: () {}),
+          onTap: () {
+            Get.to(const ProfilePage());
+          }),
     ],
   );
 }
