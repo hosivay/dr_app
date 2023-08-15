@@ -73,7 +73,7 @@ Widget NobatIsNotEmptyWidget(
               ),
             ),
             Container(
-              width: Get.width / 2.2,
+              width: Get.width / 2.5,
               height: 1,
               color: Theme.of(context)
                   .textTheme
@@ -125,7 +125,8 @@ Widget NobatIsNotEmptyWidget(
                           style: Theme.of(context).textTheme.labelLarge,
                         )
                       ],
-                    )
+                    ),const Spacer(),
+                    TextButton(onPressed: (){}, child: Text("Cancel".tr,style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.red),))
                   ],
                 ),
                 Padding(

@@ -33,6 +33,20 @@ class LocalizationService extends Translations {
           'Sign Up': 'ثبت نام',
           'Wellcome': 'خوش آمدید',
           'LocationAlert': 'در حال حاضر فقط در شهر شیراز سرویس ارائه میشود',
+          'Cancel': "لغو نوبت",
+          //
+          "Farvardin":"فروردین",
+          "Ordibehesht":"اردیبهشت",
+          "Khordad":"خرداد",
+          "Tir":"تیر",
+          "Mordad":"مرداد",
+          "Shahrivar":"شهریور",
+          "Mehr":"مهر",
+          "Aban":"آبان",
+          "Azar":"آذر",
+          "Dey":"دی",
+          "Bahman":"بهمن",
+          "Esfand":"اسفند",
         },
         'en': {
           'NameApp': "Dr App",
@@ -63,7 +77,21 @@ class LocalizationService extends Translations {
           'Login': 'Login',
           'Sign Up': 'Sign Up',
           'Wellcome': 'Wellcome',
-          'LocationAlert': "Currently, the service is provided only in Shiraz"
+          'LocationAlert': "Currently, the service is provided only in Shiraz",
+           'Cancel': "Cancel",
+           //
+          "Farvardin":"Farvardin",
+          "Ordibehesht":"Ordibehesht",
+          "Khordad":"Khordad",
+          "Tir":"Tir",
+          "Mordad":"Mordad",
+          "Shahrivar":"Shahrivar",
+          "Mehr":"Mehr",
+          "Aban":"Aban",
+          "Azar":"Azar",
+          "Dey":"Dey",
+          "Bahman":"Bahman",
+          "Esfand":"Esfand",
         },
       };
 }

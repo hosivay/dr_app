@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 List<Map<String, Object>> nobatData = [
   {
     "year": year.Farvardin,
@@ -38,18 +40,18 @@ enum year {
 }
 
 List yearFarsiList = [
-  "فروردین",
-  "اردیبهشت",
-  "خرداد",
-  "تیر",
-  "مرداد",
-  "شهریور",
-  "مهر",
-  "آبان",
-  "آذر",
-  "دی",
-  "بهمن",
-  "اسفند",
+  "Farvardin".tr,
+  "Ordibehesht".tr,
+  "Khordad".tr,
+  "Tir".tr,
+  "Mordad".tr,
+  "Shahrivar".tr,
+  "Mehr".tr,
+  "Aban".tr,
+  "Azar".tr,
+  "Dey".tr,
+  "Bahman".tr,
+  "Esfand".tr,
 ];
 
 int getYearLength(year enum_year) {
