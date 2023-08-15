@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class DropMenuController extends GetxController {
+class DropMenuSearchController extends GetxController {
   var chosenValue = "doctor".tr.obs;
 
   selectItem(String value) {

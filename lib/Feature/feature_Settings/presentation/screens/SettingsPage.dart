@@ -1,5 +1,6 @@
 import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Config/ThemeGetX.dart';
+import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/DoctorList.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/ActionText.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/Appbar_Settings.dart';
@@ -37,32 +38,30 @@ class SettingsPage extends StatelessWidget {
                 context: context,
                 icon: Icons.language,
                 title: "Language".tr,
-                actions: [ ],
+                actions: [],
                 onTap: () {
-                
-                    Get.defaultDialog(
-                      title: 'Select Language',
-                      content: Column(
-                        children: [
-                          ListTile(
-                            title: Text('English'),
-                            onTap: () {
-                              Get.updateLocale(localizationController.enLocale);
-                              Get.back();
-                            },
-                          ),
-                          ListTile(
-                            title: Text('فارسی'),
-                            onTap: () {
-                              Get.updateLocale(
-                                  localizationController.defaultLocale);
-                              Get.back();
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  
+                  Get.defaultDialog(
+                    title: 'Select Language',
+                    content: Column(
+                      children: [
+                        ListTile(
+                          title: const Text('English'),
+                          onTap: () {
+                            Get.updateLocale(localizationController.enLocale);
+                            Get.back();
+                          },
+                        ),
+                        ListTile(
+                          title: const Text('فارسی'),
+                          onTap: () {
+                            Get.updateLocale(
+                                localizationController.defaultLocale);
+                            Get.back();
+                          },
+                        ),
+                      ],
+                    ),
+                  );
                 }),
             settingsItem(
                 context: context,
@@ -73,7 +72,13 @@ class SettingsPage extends StatelessWidget {
                     context,
                     "Shiraz".tr,
                   )
-                ]),
+                ],
+                onTap: () {
+                  mySnackBar(
+                    attention: true,
+                    title: "LocationAlert".tr,
+                  );
+                }),
             myDivider(),
             row_doctorList(
               context: context,

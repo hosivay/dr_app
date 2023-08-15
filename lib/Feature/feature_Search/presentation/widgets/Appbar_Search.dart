@@ -1,4 +1,5 @@
 import 'package:dr_app/Core/widgets/AppBarNormal.dart';
+import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
 import 'package:dr_app/Feature/feature_Search/GetX/DropMenu_Getx.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,7 +8,7 @@ import 'package:get/get.dart';
 
 // ignore: non_constant_identifier_names
 AppBar appbar_SearchPage(BuildContext context) {
-  DropMenuController dropMenuController = Get.put(DropMenuController());
+  DropMenuSearchController dropMenuController = Get.put(DropMenuSearchController());
   return mainAppBar(
     title: appBar_normal(
       context: context,
@@ -15,7 +16,7 @@ AppBar appbar_SearchPage(BuildContext context) {
       icon: CupertinoIcons.search,
     ),
     actions: [
-      GetX<DropMenuController>(
+      GetX<DropMenuSearchController>(
         builder: (controller) {
           return SizedBox(
             width: Get.width / 3,
@@ -47,7 +48,7 @@ AppBar appbar_SearchPage(BuildContext context) {
           context: context,
           icon: CupertinoIcons.location_solid,
           title: "Shiraz".tr,
-          onTap: () {}),
+          onTap: () {mySnackBar(attention: true,   title: "LocationAlert".tr,);}),
     ],
   );
 }

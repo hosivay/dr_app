@@ -1,3 +1,4 @@
+import 'package:dr_app/Core/utils/Animation.dart';
 import 'package:dr_app/Feature/feature_Search/presentation/widgets/Appbar_Search.dart';
 import 'package:dr_app/Feature/feature_Search/presentation/widgets/SearchField.dart';
 import 'package:flutter/material.dart';
@@ -31,10 +32,12 @@ class SearchPage extends StatelessWidget {
             Center(
               child: GetX<AnimationSearchController>(
                 builder: (controller) {
-                  return Lottie.asset("lib/assets/lottie/search_animation.json",
-                      repeat: animationSearchController.repeat.value,
-                      width: Get.width / 1.3,
-                      height: Get.width / 1.3);
+                  return animationB(
+                    child: Lottie.asset("lib/assets/lottie/search_animation.json",
+                        repeat: animationSearchController.repeat.value,
+                        width: Get.width / 1.3,
+                        height: Get.width / 1.3),
+                  );
                 },
               ),
             )

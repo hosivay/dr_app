@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 
 SnackbarController mySnackBar(
     {required String title,
-    required String message,
+     String message = "",
     int? duration = 3,
     bool? attention = false}) {
   return Get.snackbar(title, message,

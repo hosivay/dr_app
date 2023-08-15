@@ -32,6 +32,7 @@ class LocalizationService extends Translations {
           'Login': 'ورود',
           'Sign Up': 'ثبت نام',
           'Wellcome': 'خوش آمدید',
+          'LocationAlert': 'در حال حاضر فقط در شهر شیراز سرویس ارائه میشود',
         },
         'en': {
           'NameApp': "Dr App",
@@ -62,6 +63,7 @@ class LocalizationService extends Translations {
           'Login': 'Login',
           'Sign Up': 'Sign Up',
           'Wellcome': 'Wellcome',
+          'LocationAlert': "Currently, the service is provided only in Shiraz"
         },
       };
 }

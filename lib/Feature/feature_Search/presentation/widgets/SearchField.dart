@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 Widget SearchField(BuildContext context) {
-  DropMenuController dropMenuController = Get.put(DropMenuController());
+  DropMenuSearchController dropMenuController = Get.put(DropMenuSearchController());
       AnimationSearchController animationSearchController =
         Get.put(AnimationSearchController());
   return ClipRRect(
@@ -13,14 +13,14 @@ Widget SearchField(BuildContext context) {
       width: Get.width / 1.2,
       height: 50,
       color: Theme.of(context).primaryColor.withOpacity(0.1),
-      child: GetX<DropMenuController>(
+      child: GetX<DropMenuSearchController>(
         builder: (controller) {
           return TextField(
             keyboardType: TextInputType.text,
             onChanged: (value) =>animationSearchController.repeatON(),
             decoration: InputDecoration(
               hintText:
-                  "Search by".tr+" ${dropMenuController.chosenValue.value}",
+                  "${"Search by".tr} ${dropMenuController.chosenValue.value}",
 
             ),
           );

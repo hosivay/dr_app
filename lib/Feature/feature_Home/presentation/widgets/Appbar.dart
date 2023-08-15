@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:dr_app/Core/utils/Animation.dart';
 import 'package:dr_app/Core/widgets/AppBarNormal.dart';
+import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Home/GetX/AppBar_Getx.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/ButtonAppBar.dart';
 import 'package:dr_app/assets/images/ImageConstPath.dart';
@@ -71,7 +72,9 @@ AppBar appbar_HomePage(BuildContext context) {
           context: context,
           icon: CupertinoIcons.location_solid,
           title: "Shiraz".tr,
-          onTap: () {}),
+          onTap: () {
+                mySnackBar(attention: true,   title: "LocationAlert".tr,);
+          }),
       ButtonAppBar(
           context: context,
           icon: CupertinoIcons.person_crop_circle_fill,

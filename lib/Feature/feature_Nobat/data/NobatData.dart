@@ -60,7 +60,7 @@ int getYearLength(year enum_year) {
       _count++;
     }
   }
-  print("$enum_year= $_count");
+  
   return _count;
 }
 
