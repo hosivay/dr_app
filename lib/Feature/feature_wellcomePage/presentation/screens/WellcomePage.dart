@@ -3,6 +3,7 @@ import 'package:dr_app/Config/Localization/ChangeLanguage.dart';
 import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Core/widgets/AnimateBackground.dart';
 import 'package:dr_app/Feature/feature_Login/presentation/screens/LoginPage.dart';
+import 'package:dr_app/Feature/feature_SignUp/presentation/screens/SignUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -81,7 +82,11 @@ class WellcomePage extends StatelessWidget {
                       )),
                   Container(width: 1, height: 20, color: Colors.grey),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(
+                          const SignUpPage(),
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text("Sign Up".tr),

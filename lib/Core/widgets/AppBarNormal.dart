@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 
 AppBar mainAppBar({required Widget title, List<Widget>? actions}) {
   return AppBar(
-    leading: null,
+    leading: const SizedBox(
+      height: 0,
+    ),
+    leadingWidth: 0,
     toolbarHeight: 85,
     flexibleSpace: ClipRect(
       child: BackdropFilter(

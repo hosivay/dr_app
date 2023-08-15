@@ -1,5 +1,6 @@
 import 'package:dr_app/Core/widgets/AnimateBackground.dart';
 import 'package:dr_app/Feature/feature_Login/GetX/Login_Getx.dart';
+import 'package:dr_app/Feature/feature_SignUp/presentation/widgets/TextFieldWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -23,9 +24,12 @@ class LoginPage extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
-                    Lottie.network(
-                        'https://lottie.host/abe1357f-a83f-43fd-9371-7287609dd766/j9XC6KfEFk.json',
-                        repeat: false),
+                    Obx(
+                      () {
+                        return Lottie.asset(loginController.animation.value,
+                            repeat: loginController.isRepeatAnimation.value);
+                      },
+                    ),
                     const SizedBox(
                       height: 140,
                     ),
@@ -39,34 +43,21 @@ class LoginPage extends StatelessWidget {
                               showFieldAsBox: true,
                               onCodeChanged: (String code) {},
                               onSubmit: (String verificationCode) =>
-                                  loginController.codeIsTrue()),
+                                  loginController.codeIsTrue(context)),
                         );
                       } else {
                         return Column(
                           children: [
-                            Directionality(
-                              textDirection: TextDirection.ltr,
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.fromLTRB(20, 0, 20, 8),
-                                child: TextField(
-                                  controller:
-                                      loginController.myTextfieldController,
-                                  textDirection: TextDirection.ltr,
-                                  inputFormatters: [
-                                    MaskTextInputFormatter(
-                                        mask: "+98 ### ### ####")
-                                  ],
-                                  keyboardType: TextInputType.phone,
-                                  decoration: InputDecoration(
-                                      hintText: "+98 ___ ___ ____",
-                                      enabledBorder: myinputborder(),
-                                      focusedBorder: myfocusborder(),
-                                      fillColor: Colors.white.withOpacity(0.8),
-                                      filled: true),
-                                ),
-                              ),
-                            ),
+                            myTextField(
+                                controller:
+                                    loginController.myTextfieldController,
+                                hint: "+98 ___ ___ ____",
+                                label: "PhoneNumber".tr,
+                                inputFormatters: [
+                                  MaskTextInputFormatter(
+                                      mask: "+98 ### ### ####")
+                                ],
+                                keyboardType: TextInputType.phone),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: ElevatedButton(

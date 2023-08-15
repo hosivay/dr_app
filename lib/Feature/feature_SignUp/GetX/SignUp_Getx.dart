@@ -4,11 +4,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
+class SignUpController extends GetxController {
   var isSetNumber = false.obs;
   var animation = "lib/assets/lottie/login.json".obs;
   var isRepeatAnimation = false.obs;
-  TextEditingController myTextfieldController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController nationalCodeController = TextEditingController();
+  TextEditingController phoneNumberController = TextEditingController();
+  TextEditingController ageController = TextEditingController();
+  var chosenValue = "man".tr.obs;
+
+  selectItem(String value) {
+    chosenValue(value);
+
+    update();
+  }
 
   sendSMS() {
     isSetNumber(true);
@@ -23,7 +33,7 @@ class LoginController extends GetxController {
     animation.value = "lib/assets/lottie/Tik.json";
     isRepeatAnimation(true);
     Future.delayed(const Duration(seconds: 1), () => isRepeatAnimation(false));
-    Future.delayed(
+  Future.delayed(
         const Duration(seconds: 5),
         () => Navigator.pushReplacement(
             context,

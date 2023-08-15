@@ -47,6 +47,15 @@ class LocalizationService extends Translations {
           "Dey":"دی",
           "Bahman":"بهمن",
           "Esfand":"اسفند",
+          //
+          "NameUser":"نام و نام خانوادگی",
+          "PhoneNumber":"شماره تماس",
+          "NationalCode":"کد ملی",
+          "age":"سن",
+          "gender": "جنسیت",
+          //
+              "man":"آقا",
+          "woman":"خانم",
         },
         'en': {
           'NameApp': "Dr App",
@@ -92,6 +101,15 @@ class LocalizationService extends Translations {
           "Dey":"Dey",
           "Bahman":"Bahman",
           "Esfand":"Esfand",
+          //
+           "NameUser":"Name",
+          "PhoneNumber":"PhoneNumber",
+          "NationalCode":"National Code",
+          "age":"Age",
+          "gender":"Gender",
+          //
+          "man":"Male",
+          "woman":"Female",
         },
       };
 }
