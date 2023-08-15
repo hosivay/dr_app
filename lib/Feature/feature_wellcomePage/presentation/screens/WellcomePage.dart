@@ -1,7 +1,9 @@
-import 'dart:ui'; 
+import 'dart:ui';
+import 'package:dr_app/Config/Localization/ChangeLanguage.dart';
+import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Core/widgets/AnimateBackground.dart';
 import 'package:dr_app/Feature/feature_Login/presentation/screens/LoginPage.dart';
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class WellcomePage extends StatelessWidget {
@@ -9,13 +11,31 @@ class WellcomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizationController = Get.put(LocalizationController());
     return Scaffold(
       body: animateBackground(
         context: context,
         child: Column(children: [
           Padding(
-            padding: const EdgeInsets.only(top: 60),
+            padding: const EdgeInsets.fromLTRB(9, 35, 9, 0),
+            child: Row(
+              children: [
+                IconButton(
+                    onPressed: () {
+                      ChangeLanguage(localizationController);
+                    },
+                    icon: const Icon(
+                      Icons.translate,
+                      color: Colors.white,
+                    ))
+              ],
+            ),
+          ),
+          SizedBox(
+            height: Get.height / 1.4,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -41,46 +61,35 @@ class WellcomePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: Get.height / 7,
-          ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(30),
-            child: Container(
-              width: Get.width / 2,
-              height: Get.width / 2,
-              color: Colors.white.withOpacity(0.4),
-              child: ClipRect(
-                child: BackdropFilter(
-                  filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
-                  child: Container(
-                    color: Colors.black.withOpacity(0.1),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              Get.to(
-                                const LoginPage(),
-                              );
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text("Login".tr),
-                            )),
-                        ElevatedButton(
-                            onPressed: () {},
-                            child:  Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text("Sign Up".tr),
-                            )),
-                      ],
-                    ),
-                  ),
-                ),
+          const Spacer(),
+          Container(
+            color: Theme.of(context).scaffoldBackgroundColor,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Get.to(
+                          const LoginPage(),
+                        );
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Login".tr),
+                      )),
+                  Container(width: 1, height: 20, color: Colors.grey),
+                  TextButton(
+                      onPressed: () {},
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text("Sign Up".tr),
+                      )),
+                ],
               ),
             ),
-          )
+          ),
         ]),
       ),
     );

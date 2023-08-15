@@ -9,11 +9,13 @@ Widget animateBackground(
       primaryColors: [
         Theme.of(context).primaryColor,
         Theme.of(context).primaryColor.withOpacity(0.8),
-        Theme.of(context).primaryColor.withOpacity(0.6), 
+        Theme.of(context).primaryColor.withOpacity(0.6),
+        Theme.of(context).primaryColor.withOpacity(0.6),
       ],
       secondaryColors: [
         Theme.of(context).primaryColor,
-        Theme.of(context).primaryColor.withOpacity(0.5), 
+        Theme.of(context).primaryColor.withOpacity(0.7),
+        Theme.of(context).primaryColor.withOpacity(0.6),
         Theme.of(context).colorScheme.background,
       ],
       child: child);

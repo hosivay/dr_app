@@ -1,3 +1,4 @@
+import 'package:dr_app/Config/Localization/ChangeLanguage.dart';
 import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Config/ThemeGetX.dart';
 import 'package:dr_app/Core/widgets/Snackbar.dart';
@@ -36,32 +37,11 @@ class SettingsPage extends StatelessWidget {
                 }),
             settingsItem(
                 context: context,
-                icon: Icons.language,
+                icon: Icons.translate,
                 title: "Language".tr,
                 actions: [],
                 onTap: () {
-                  Get.defaultDialog(
-                    title: 'Select Language',
-                    content: Column(
-                      children: [
-                        ListTile(
-                          title: const Text('English'),
-                          onTap: () {
-                            Get.updateLocale(localizationController.enLocale);
-                            Get.back();
-                          },
-                        ),
-                        ListTile(
-                          title: const Text('فارسی'),
-                          onTap: () {
-                            Get.updateLocale(
-                                localizationController.defaultLocale);
-                            Get.back();
-                          },
-                        ),
-                      ],
-                    ),
-                  );
+                  ChangeLanguage(localizationController);
                 }),
             settingsItem(
                 context: context,
@@ -104,4 +84,6 @@ class SettingsPage extends StatelessWidget {
       ),
     );
   }
+
+ 
 }
