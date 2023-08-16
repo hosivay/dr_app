@@ -1,6 +1,7 @@
 import 'package:dr_app/Config/Localization/ChangeLanguage.dart';
 import 'package:dr_app/Config/Localization/Localization_Getx.dart';
 import 'package:dr_app/Config/ThemeGetX.dart';
+import 'package:dr_app/Config/Version.dart';
 import 'package:dr_app/Core/widgets/Snackbar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/DoctorList.dart';
 import 'package:dr_app/Feature/feature_Settings/presentation/widgets/ActionText.dart';
@@ -70,7 +71,7 @@ class SettingsPage extends StatelessWidget {
                 context: context,
                 icon: CupertinoIcons.gear_alt_fill,
                 title: "Version".tr,
-                actions: [actionText(context, "v1.0")]),
+                actions: [actionText(context, Version)]),
             myDivider(),
             settingsItem(
                 context: context,
