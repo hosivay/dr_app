@@ -1,16 +1,31 @@
-# dr_app
 
-A new Flutter project.
 
-## Getting Started
+# **<span style="font-size:45px;">Dr App</span>** <br/>
 
-This project is a starting point for a Flutter application.
+![Dr_App](https://s8.uupload.ir/files/20230815_140000_qhda.jpg)
 
-A few resources to get you started if this is your first Flutter project:
+## ✨ Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [x] Language English & Farsi
+- [x] Dark Mode
+- [x] Material Design 3
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📸 ScreenShots
+
+| Light                             | Dark                              |
+| --------------------------------- | --------------------------------- |
+| <img src="bg/1.jpg" width="300">  | <img src="bg/2.jpg" width="300">  |
+| <img src="bg/3.jpg" width="300">  | <img src="bg/4.jpg" width="300">  |
+| <img src="bg/5.jpg" width="300">  | <img src="bg/6.jpg" width="300">  |
+| <img src="bg/7.jpg" width="300">  | <img src="bg/8.jpg" width="300">  |
+
+
+## 🔌 Plugins
+
+| Name                                                                   | Usage                                         |
+| ---------------------------------------------------------------------- | --------------------------------------------- |
+| [**GetX**](https://pub.dev/packages/get)                               | State Management                              |
+| [**GetX Storage**](https://pub.dev/packages/get_storage)               | Local Storage                                 |
+
+ # <em><span style="font-size:10px;">Version : 0.7 Beta</span><em/><br/>
+
