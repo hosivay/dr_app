@@ -1,16 +1,19 @@
 import 'package:dr_app/Config/ThemeGetX.dart';
+import 'package:dr_app/Feature/feature_Home/GetX/DoctorList_Getx.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/Appbar.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/CatagoryWidget.dart';
 import 'package:dr_app/Feature/feature_Home/presentation/widgets/DoctorList.dart';
-import 'package:dr_app/Feature/feature_Home/presentation/widgets/Slider.dart'; 
+import 'package:dr_app/Feature/feature_Home/presentation/widgets/Slider.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart'; 
+import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    DoctorListController doctorListController = Get.put(DoctorListController());
+    doctorListController.checkLocale();
     return Scaffold(
       appBar: appbar_HomePage(context),
       body: SingleChildScrollView(
@@ -33,15 +36,12 @@ class HomePage extends StatelessWidget {
             catagory_Widget(context),
             myDivider(),
             row_doctorList(
-              context:context,
+              context: context,
               topDoctors: true,
-            ), 
-            
+            ),
           ],
         ),
       ),
     );
   }
-
- 
 }
