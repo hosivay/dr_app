@@ -4,17 +4,13 @@
 
 [![Dr_App](https://s8.uupload.ir/files/20230815_140000_qhda.jpg)
 
-
 ## ✨ Features
 
-- [x] Language English & Farsi.
-- [x] Save Doctors.
+- [x] Language English & Farsi
 - [x] Dark Mode
-- [x] Material Design 3.
+- [x] Material Design 3
 
 ## 📸 ScreenShots
-
-<!-- <img src="ss/mockup.png"/> -->
 
 | Light                             | Dark                              |
 | --------------------------------- | --------------------------------- |
@@ -29,7 +25,7 @@
 | Name                                                                   | Usage                                         |
 | ---------------------------------------------------------------------- | --------------------------------------------- |
 | [**GetX**](https://pub.dev/packages/get)                               | State Management                              |
-| [**GetX Storage**](https://pub.dev/packages/get_storage)                    | Local Storage                                 |
+| [**GetX Storage**](https://pub.dev/packages/get_storage)               | Local Storage                                 |
 
  # <em><span style="font-size:10px;">Version : 0.7 Beta</span><em/><br/>
 
