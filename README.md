@@ -5,12 +5,6 @@
 [![Dr_App](https://s8.uupload.ir/files/20230815_140000_qhda.jpg)
 
 
-## 💻 Requirements
-
-- Any Operating System (ie. MacOS X, Linux, Windows)
-- Any IDE with Flutter SDK installed (ie. IntelliJ, Android Studio, VSCode etc)
-- A knowledge of Dart and Flutter
-
 ## ✨ Features
 
 - [x] Language English & Farsi.
