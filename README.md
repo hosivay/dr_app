@@ -36,7 +36,7 @@
 | Name                                                                   | Usage                                         |
 | ---------------------------------------------------------------------- | --------------------------------------------- |
 | [**GetX**](https://pub.dev/packages/get)                               | State Management                              |
-| [**Sembast**](https://pub.dev/packages/get_storage)                    | Local Storage                                 |
+| [**GetX Storage**](https://pub.dev/packages/get_storage)                    | Local Storage                                 |
 
  # <em><span style="font-size:10px;">Version : 0.7 Beta</span><em/><br/>
 
