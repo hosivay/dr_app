@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final localizationController = Get.put(LocalizationController());
-    final savedLocale =
-        localizationController.stringToLocale(GetStorage().read("locale") ?? "fa");
+    final savedLocale = localizationController
+        .stringToLocale(GetStorage().read("locale") ?? "fa");
 
-    final locale = savedLocale ?? localizationController.defaultLocale;
+    final locale = savedLocale;
 
     return GetMaterialApp(
       title: 'Dr App',
