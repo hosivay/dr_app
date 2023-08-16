@@ -2,7 +2,7 @@
 
 # **<span style="font-size:45px;">Dr App</span>** <br/>
 
-![Dr_App](https://s8.uupload.ir/files/20230815_140000_qhda.jpg)
+<img src="bg/banner.jpg" width="500">
 
 ## ✨ Features
 
