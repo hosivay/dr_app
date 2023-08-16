@@ -24,11 +24,10 @@
 
 | Light                             | Dark                              |
 | --------------------------------- | --------------------------------- |
-| <img src="bg/1.png" width="300">  | <img src="bg/2.png" width="300">  |
-| <img src="bg/3.png" width="300">  | <img src="bg/4.png" width="300">  |
-| <img src="bg/5.png" width="300">  | <img src="bg/6.png" width="300">  |
-| <img src="bg/7.png" width="300">  | <img src="bg/8.png" width="300">  |
-| <img src="bg/9.png" width="300">  | <img src="bg/10.png" width="300"> |
+| <img src="bg/1.jpg" width="300">  | <img src="bg/2.jpg" width="300">  |
+| <img src="bg/3.jpg" width="300">  | <img src="bg/4.jpg" width="300">  |
+| <img src="bg/5.jpg" width="300">  | <img src="bg/6.jpg" width="300">  |
+| <img src="bg/7.jpg" width="300">  | <img src="bg/8.jpg" width="300">  |
 
 
 ## 🔌 Plugins
